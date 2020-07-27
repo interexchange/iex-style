@@ -1,0 +1,144 @@
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/migrate/**/*.rb'
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+Layout/DotPosition:
+  EnforcedStyle: trailing
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+Layout/LineLength:
+  Enabled: false
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: new_line
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+Layout/MultilineOperationIndentation:
+  Enabled: false
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Layout/SpaceBeforeFirstArg:
+  Enabled: true
+Layout/SpaceInLambdaLiteral:
+  EnforcedStyle: require_space
+Layout/SpaceInsideStringInterpolation:
+  EnforcedStyle: space
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'features/**/*.rb'
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+
+Metrics/AbcSize:
+  Exclude:
+    - 'config/**/*.rb'
+Metrics/BlockLength:
+  Exclude:
+    - 'config/**/*.rb'
+    - 'db/seeds/*'
+    - 'features/**/*.rb'
+    - 'lib/factories/**/*.rb'
+    - 'lib/tasks/**/*.rake'
+    - 'spec/**/*.rb'
+Metrics/BlockNesting:
+  Exclude:
+    - 'features/**/*.rb'
+    - 'spec/**/*.rb'
+Metrics/MethodLength:
+  Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
+
+# While this might be reasonable for models, there are plenty of times where prefixing with get
+# in controllers makes perfect sense. EG: #get_layout
+Naming/AccessorMethodName:
+  Enabled: true
+  Exclude:
+    - 'app/controllers/**/*.rb'
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
+Naming/VariableNumber:
+  Enabled: false
+
+Security/Eval:
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'features/**/*.rb'
+Style/AccessModifierDeclarations:
+  EnforcedStyle: inline
+Style/AndOr:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/CollectionMethods:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Style/EmptyMethod:
+  Enabled: false
+Style/ExponentialNotation:
+  Enabled: true
+Style/FormatStringToken:
+  Exclude:
+    - 'config/**/*.rb'
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+Style/GuardClause:
+  Enabled: false
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+Style/IdenticalConditionalBranches:
+  Exclude:
+    - 'spec/**/*.rb'
+Style/IfUnlessModifier:
+  Enabled: false
+Style/Lambda:
+  EnforcedStyle: literal
+Style/NegatedIf:
+  Enabled: false
+Style/NumericLiterals:
+  Exclude:
+    - 'lib/tasks/data/fix.rake'
+Style/NumericPredicate:
+  Enabled: false
+Style/ParallelAssignment:
+  Enabled: false
+Style/RegexpLiteral:
+  AllowInnerSlashes: false
+  EnforcedStyle: mixed
+Style/SlicingWithRange:
+  Enabled: true
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/SymbolArray:
+  EnforcedStyle: brackets
+Style/TernaryParentheses:
+  EnforcedStyle: require_parentheses_when_complex
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: consistent_comma
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+Style/TrailingUnderscoreVariable:
+  Enabled: false
+Style/WordArray:
+  Enabled: false
+Style/YodaCondition:
+  Enabled: false
